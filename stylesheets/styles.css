@@ -202,6 +202,30 @@ td {
   padding: 10px;
 	background: #ccc;
  }
+ 
+ /* Button */
+.button {
+	background-color:#51026e;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	border:1px solid #000000;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:17px;
+	padding:5%;
+	text-decoration:none;
+	width:100%;
+}
+.button:hover {
+	background-color:#7e07a9;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
 
 
 /* Wrapper */
@@ -213,8 +237,8 @@ td {
 /* Header */
 
 header {
-	background-color: #171717;
-	color: #FDFDFB;
+	background-color: #0772a1;
+	color: #FFFFFF;
   width:170px;
   float:left;
   position:fixed;
