@@ -54,18 +54,18 @@ body {
   font-size: 15px;
   font-family: Arial, Arial, Helvetica, sans-serif;
   line-height: 1.5;
-  background: #D1D1D1;
+  background: #E6F3F5;
 }
 
 a {
-  color: #63a52a;
+  color: #A67100;
   text-decoration: none;
   -webkit-transition: color ease-in-out 0.3s;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #90D355;
+  color: #BF9230;
 }
 
 h1.title {
@@ -84,7 +84,7 @@ h1.title {
 
 #container {
   border: 1px solid #2a2a2a;
-  background: #ddd url(../images/pattern.png);
+  background-color: #533800;
   box-shadow: 0 0 5px #b1b1b1;
 }
 
@@ -97,12 +97,13 @@ p.tagline {
 #main {
   margin-top: 20px;
   padding: 0 20px 90px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .download-bar {
-  background: #222;
-  border: 5px solid #444;
+  background: #A60C00;
+  color: #ffffff;
+  border: 5px solid #640700;
   padding: 10px;
   margin: 0 -35px 20px;
   position: relative;
@@ -306,11 +307,11 @@ footer {
 }
 
 footer .owner {
-  background: #222;
-  border: 5px solid #444;
+  background: #A60C00;
+  border: 5px solid #640700;
   padding: 5px 15px;
   margin: -67px -10px 35px;
-  color: #d6d6d6;
+  color: #ffffff;
 }
 
 footer .creds small {
@@ -321,17 +322,17 @@ footer .creds small {
 }
 
 footer .owner .avatar {
-  background-color: #666;
+  background-color: #A60C00;
   display: block;
   margin: -19px 10px 0 0;
-  width: 60px;
+  border: 5px solid #640700;
+  width: 50px;
   float: left;
 }
 
 footer .owner img {
   display: block;
-  border: 1px solid #2a2a2a;
-  margin: 5px;
+  margin: 1px;
 }
 
 footer .owner p {
