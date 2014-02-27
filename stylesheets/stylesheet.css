@@ -88,8 +88,18 @@ h1.title {
   box-shadow: 0 0 5px #b1b1b1;
 }
 
-p.tagline {
-  padding: 20px 20px 0;
+#location {
+	
+display: inline-table;
+}
+
+
+#hours {
+	
+	display: inline-table;
+}
+
+p.info {
   color: #A60C00;
   font-size: 17px;
   font-weight: bold;
@@ -388,17 +398,18 @@ footer .creds small {
 }
 
 footer .owner .avatar {
-  background-color: #A60C00;
+  background-color: #393E8F;
   display: block;
-  margin: -19px 10px 0 0;
-  border: 5px solid #640700;
-  width: 50px;
+  margin: -14px 10px 0 0;
+  height: 48px;
+  width: 48px;
+  border: 2px solid #393E8F;
+  border-radius: 20%;
   float: left;
 }
 
 footer .owner img {
   display: block;
-  margin: 1px;
 }
 
 footer .owner p {
