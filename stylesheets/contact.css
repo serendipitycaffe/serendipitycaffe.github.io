@@ -1,0 +1,28 @@
+form {
+    font-family: Verdana, Arial, sans-serif;
+}
+
+input {
+    font-family: Verdana, Arial, sans-serif;
+    color: #777;
+}
+
+textarea {
+	vertical-align: top;
+	width: auto;
+	color: #777;
+}
+
+#inputs {
+	
+	width: 300px;
+	float: left;	
+}
+
+
+#gmap_canvas {
+	
+	height:350px;
+	width:300px;
+	float: right;
+}

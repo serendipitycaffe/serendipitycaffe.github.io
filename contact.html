@@ -8,6 +8,7 @@
 
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
   <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <link rel="stylesheet" href="stylesheets/contact.css"/>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
 
@@ -44,9 +45,41 @@
         </div>
         <article class="markdown-body">
           <h2>
-<a name="serendipity-caffe" class="anchor" href="#serendipity-caffe"><span class="octicon octicon-link"></span></a>Serendipity Caffe</h2>
+<a name="serendipity-caffe" class="anchor" href="#serendipity-caffe"><span class="octicon octicon-link"></span></a>Serendipity Caffe: Contact Us</h2>
 
-Under construction
+<div id="inputs">
+	<form name="contact" action="#" method="post">
+		First name: <input type="text" name="firstname" value="first name"><br/>
+		Last name: <input type="text" name="lastname" value="last name"><br/>
+		Phone: <input type="text" name="phone" value="phone number"><br/>
+		E-mail: <input type="email" name="email" value="e-mail address"><br/><br/>
+		Preferred method of contact:<br />
+		<input type="checkbox" name="phone" value="men">Phone
+		<input type="checkbox" name="email" value="men">Email<br /><br />
+	</form>
+          
+                <form id="options">
+                    Message: <br/><textarea name="msg"></textarea><br/>
+      
+                    <input type="submit" value="Submit">
+                </form>
+</div>
+
+<div id="gmap_canvas"></div>
+
+	<!-- Source code from embed-google-map.com -->
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<div style="overflow:hidden;height:350px;width:300px;">
+		
+		<script type="text/javascript">
+		function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(46.16418220000001,-123.9249031),mapTypeId: google.maps.MapTypeId.ROADMAP};
+		map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);
+		marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(46.16418220000001, -123.9249031)});
+		infowindow = new google.maps.InfoWindow({content:"<div style='position:relative;line-height:1.34;overflow:hidden;white-space:nowrap;display:block;'><div style='margin-bottom:2px;font-weight:500;'>Serendipity Caffe</div><span>160 South Main Avenue <br> 97146 Warrenton</span></div>" });
+		google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+		</script>
+		
+	</div>
 
         </article>
       </div>
