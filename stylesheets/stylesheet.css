@@ -82,6 +82,11 @@ h1.title {
   margin: 0 auto;
 }
 
+#header {
+	
+	margin-left: 20px;
+}
+
 #container {
   border: 2px solid #FFAE00;
   background-color: #ffffff;
@@ -90,19 +95,27 @@ h1.title {
 
 #location {
 	
-display: inline-table;
+	float: left;
+	padding: 2px;
 }
 
 
 #hours {
 	
-	display: inline-table;
+	float: right;
+	padding: 2px;
 }
 
 p.info {
+	
   color: #A60C00;
   font-size: 17px;
-  font-weight: bold;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+span.strong {
+	
+	font-weight: bold;
 }
 
 div.button {
@@ -124,15 +137,15 @@ div.button {
 	border-bottom-left-radius:0px;
 	text-indent:0;
 	border:1px solid #080d73;
-	display:inline-block;
+	/*display:inline-block;*/
+	display: table-cell;
 	color:#c92200;
 	font-family: Verdana, Arial, Sans-Serif;
 	font-size: 1em;
 	font-weight: bold;
-	font-weight:bold;
 	height:100%;
+	width: 1%;
 	line-height:100%;
-	width:auto;
 	text-decoration:none;
 	text-align:center;
 	text-shadow:1px 1px 0px #ded17c;
@@ -145,8 +158,8 @@ div.button a {
 	padding: 10px;
 	font-weight:bold;
 	height:100%;
+	width: auto;
 	line-height:100%;
-	width:auto;
 	text-decoration:none;
 }
 
@@ -157,26 +170,28 @@ div.button a:hover {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911');
 	background-color:#f2ab1e;
 	color:#c92200;
-	display:inline-block;
+	display: table-cell;
 	font-weight:bold;
 	height:100%;
+	width: 1%;
 	line-height:100%;
-	width: auto;
 	text-decoration: none;
 }
 
 div.button a:active {
 	position:relative;
-	top:1px;
+	top: 1px;
 }
 
 #main {
   margin-top: 20px;
   padding: 0 20px 90px;
   background-color: #ffffff;
+  clear: both;
 }
 
 .download-bar {
+	
   background: #080e73;
   color: #ffffff;
   border: 5px solid #393E8F;
@@ -186,6 +201,7 @@ div.button a:active {
 }
 
 .download-bar .inner {
+	
   overflow: hidden;
 }
 
