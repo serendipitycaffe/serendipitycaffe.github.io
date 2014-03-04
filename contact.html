@@ -48,20 +48,51 @@
 <a name="serendipity-caffe" class="anchor" href="#serendipity-caffe"><span class="octicon octicon-link"></span></a>Serendipity Caffe: Contact Us</h2>
 
 <div id="inputs">
-	<form name="contact" action="#" method="post">
-		First name: <input type="text" name="firstname" value="first name"><br/>
-		Last name: <input type="text" name="lastname" value="last name"><br/>
-		Phone: <input type="text" name="phone" value="phone number"><br/>
-		E-mail: <input type="email" name="email" value="e-mail address"><br/><br/>
-		Preferred method of contact:<br />
-		<input type="checkbox" name="phone" value="men">Phone
-		<input type="checkbox" name="email" value="men">Email<br /><br />
-	</form>
-          
-                <form id="options">
-                    Message: <br/><textarea name="msg"></textarea><br/>
-      
-                    <input type="submit" value="Submit">
+	<form name="contact" method="post" action="contact_submit.php">
+	
+ 		<table class="contact">
+          <tr>
+                 
+             <td><label for="firstname"><span class="strong">First Name*</span></label></td></tr>
+             <tr><td><input type="text" name="firstname" value="" size="30" /></td>
+              </tr>
+             <tr>
+           	 <td><label for="lastname"><span class="strong">Last Name*</span></label></td></tr>
+                <tr><td><input type="text" name="lastname" value="" size="30" /></td>
+              </tr>
+                      
+                <tr>
+                <td><label for="phone"><span class="strong">Phone*</span></label></td></tr>
+                <tr><td><input name="phone" type="text" value="" size="30" /></td>
+                </tr>
+                                
+                <tr>
+                <td><label for="email"><span class="strong">E-mail</span></label></td></tr>
+               <tr><td><input name="email" type="text" value="" size="30" /></td>
+               </tr>
+                
+                                
+                <tr>
+                 <td><label for="time"><span class="strong">Preferred Time To Contact*</span></label></td></tr>
+                 <tr><td><input name="time" type="text" value="" size="30" /></td>
+                 </tr>
+                 
+                 <tr>
+                 	<td><label for="message"><span class="strong">Message:</span></label></td></tr>
+                 	<tr><td><textarea></textarea></td>
+                 </tr>
+                                
+                 <tr>
+                 <td><label for="captcha"><span class="strong">Add these numbers:</span><br />5 + 2 =</label></td></tr>
+                 <tr><td><input type="text" name="captcha" /></td>
+                </tr>
+                  <tr>
+                 <tr><td colspan="2"><input type="submit" name="button" id="button" value="Submit" />
+                  <input type="reset" name="button2" id="button2" value="Reset" />
+                   </td>
+                   </tr>
+                  </table>	
+
                 </form>
 </div>
 
@@ -69,7 +100,7 @@
 
 	<!-- Source code from embed-google-map.com -->
 	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-	<div style="overflow:hidden;height:350px;width:300px;">
+	<div id="map">
 		
 		<script type="text/javascript">
 		function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(46.16418220000001,-123.9249031),mapTypeId: google.maps.MapTypeId.ROADMAP};
@@ -80,10 +111,11 @@
 		</script>
 		
 	</div>
-
+	
         </article>
       </div>
     </div>
+    
     <footer>
       <div class="owner">
 

@@ -17,6 +17,20 @@ textarea {
 	
 	width: 300px;
 	float: left;	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e) );
+	background:-moz-linear-gradient( center top, #f0c911 5%, #f2ab1e 100% );
+	border:2px solid #A60C00;
+	border-radius: 10px;
+}
+
+table.contact, tr, td {
+	
+	width: auto;
+	color: #A60C00;
+	vertical-align: top;
+	padding: 2px;
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -25,4 +39,11 @@ textarea {
 	height:350px;
 	width:300px;
 	float: right;
+}
+
+#map {
+	overflow:hidden;
+	height: 350px;
+	width:300px;
+}
 }
