@@ -11,6 +11,96 @@
   <link rel="stylesheet" href="stylesheets/contact.css"/>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
+  
+  <?php
+
+	//email and subject line
+	$email_to = "updip.tech@gmail.com";
+	$email_subject = "Attention: Serendipity Contact Form";
+
+	//if user has clicked submit
+	if(isset($_POST['submit'])) {
+		if(isset($_POST['firstname']) || isset($_POST['lastname']) || isset($_POST['phone']) || isset($_POST['time']) || isset($_POST['message']) || isset($_POST['captcha'])) {
+		
+		$first_name = $_POST['firstname']; // required
+	  	$last_name = $_POST['lastname']; // required
+	  	$phone = $_POST['phone']; // required
+   		$email_from = $_POST['email']; // not required
+    	$time = $_POST['time']; // required
+    	$client_message = $_POST['message']; // required
+    	$captcha = $_POST['captcha']; //required
+    
+    	//validate input
+    	$val_first_name = eregi('[^a-z]', $first_name);
+		if($val_first_name == TRUE) {
+			echo "Sorry, you must only enter letters for a name.";
+		}
+	
+		$val_last_name = eregi('[^a-z]', $last_name);
+		if($val_last_name == TRUE) {
+			echo "Sorry, you must only enter letters for a name.";
+		}
+	
+		$val_phone = eregi('[0-9]{3}-[0-9]{3}-[0-9]{4}', $phone);
+		if($val_phone == FALSE) {
+			echo "Sorry, please enter your phone number in the following format: 555-555-5555";
+		}
+	
+		//if email provided, validate email
+		if($email_from == '') {
+			$val_email = FALSE;
+		}
+		else if($email_from != '') {
+			$val_email = eregi('[a-z0-9][@]{1}[a-z0-9][.][a-z.]{2,}', $email_from);
+			if($val_email == TRUE) {
+				echo "Sorry, your email must be in the following format: myname@example.com";
+			}
+		}
+
+		//add something to validate the time
+	
+		//do we need to validate the client message?
+	
+		$val_captcha = eregi('[^7]', $captcha);
+		if($val_captcha == TRUE) {
+			echo "Sorry, you have not entered the correct solution for the captcha.";
+		}
+		
+		if($val_first_name == TRUE && $val_last_name == TRUE && $val_phone == TRUE && $val_email == FALSE && $val_captcha == TRUE) {
+				
+			$email_message = "Form details below.\n\n";
+ 			function clean_string($string) {
+ 			$bad = array("content-type","bcc:","to:","cc:","href");
+ 			return str_replace($bad,"",$string);
+			}
+			
+ 			$email_message .= "First Name: ".clean_string($first_name)."\n";
+    		$email_message .= "Last Name: ".clean_string($last_name)."\n";
+			$email_message .= "Telephone: ".clean_string($phone)."\n";
+			$email_message .= "Email: ".clean_string($email_from)."\n";
+			$email_message .= "Best Time To Contact: ".clean_string($time)."\n";
+			$email_message .= "Message: ".clean_string($client_message)."\n";
+ 
+			// create email headers
+ 			$headers = 'From: '.$email_from."\r\n".
+ 			'Reply-To: '.$email_from."\r\n" .
+ 			'X-Mailer: PHP/' . phpversion();
+			
+			//send form to email
+ 			if(mail($email_to, $email_subject, $email_message, $headers)) {
+ 				echo "Thank you for contacting us!  A representative will contact you shortly.";
+ 			}
+			else {
+				echo "Sorry, something went wrong.  Please try again.";
+			}
+	}	
+	}
+	
+		else {
+			echo "Sorry, you have not filled out all the required fields.";
+		}
+	}
+	?>
 
   <title>Contact</title>
   <meta name="description" content="Where good things happen">
@@ -39,7 +129,7 @@
           <div class="button"><a href="index.html">Home</a></div>
           <div class="button"><a href="menu.html">Menu</a></div>
           <div class="button"><a href="catering.html">Catering</a></div>
-          <div class="button"><a href="contact.html">Contact</a></div>
+          <div class="button"><a href="contact.php">Contact</a></div>
         </div>
         <span class="blc"></span><span class="trc"></span>
         </div>
@@ -48,38 +138,38 @@
 <a name="serendipity-caffe" class="anchor" href="#serendipity-caffe"><span class="octicon octicon-link"></span></a>Serendipity Caffe: Contact Us</h2>
 
 <div id="inputs">
-	<form name="contact" method="post" action="contact_submit.php">
+	<form name="contact" method="post" action="contact.php">
 	
  		<table class="contact">
           <tr>
                  
              <td><label for="firstname"><span class="strong">First Name*</span></label></td></tr>
-             <tr><td><input type="text" name="firstname" value="" size="30" /></td>
+             <tr><td><input type="text" name="firstname" placeholder="John" value="" size="30" /></td>
               </tr>
              <tr>
            	 <td><label for="lastname"><span class="strong">Last Name*</span></label></td></tr>
-                <tr><td><input type="text" name="lastname" value="" size="30" /></td>
+                <tr><td><input type="text" name="lastname" placeholder="Doe" value="" size="30" /></td>
               </tr>
                       
                 <tr>
                 <td><label for="phone"><span class="strong">Phone*</span></label></td></tr>
-                <tr><td><input name="phone" type="text" value="" size="30" /></td>
+                <tr><td><input name="phone" type="text" placeholder="555-555-5555" value="" size="30" /></td>
                 </tr>
                                 
                 <tr>
                 <td><label for="email"><span class="strong">E-mail</span></label></td></tr>
-               <tr><td><input name="email" type="text" value="" size="30" /></td>
+               <tr><td><input name="email" type="email" placeholder="myname@example.com" value="" size="30" /></td>
                </tr>
                 
                                 
                 <tr>
                  <td><label for="time"><span class="strong">Preferred Time To Contact*</span></label></td></tr>
-                 <tr><td><input name="time" type="text" value="" size="30" /></td>
+                 <tr><td><input name="time" type="text" placeholder="Between 9am and 5pm" value="" size="30" /></td>
                  </tr>
                  
                  <tr>
                  	<td><label for="message"><span class="strong">Message:</span></label></td></tr>
-                 	<tr><td><textarea></textarea></td>
+                 	<tr><td><textarea name="message" placeholder="Enter your message here"></textarea></td>
                  </tr>
                                 
                  <tr>
