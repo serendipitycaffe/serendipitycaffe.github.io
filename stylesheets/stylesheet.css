@@ -109,7 +109,7 @@ h1.title {
 p.info {
 	
   color: #A60C00;
-  font-size: 17px;
+  font-size: large;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -320,6 +320,43 @@ div.button a:active {
   margin-right: 8px;
 }
 
+#welcomepic {
+	
+	display:inline-block;
+	float:right;
+	border-radius: 10px;
+	height: auto;
+	width: 50%;
+	margin: 20px 0px 0px 10px;
+}
+
+a.bodylink {
+	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e) );
+	background:-moz-linear-gradient( center top, #f0c911 5%, #f2ab1e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f2ab1e');
+	background-color:#f0c911;
+	color:#A60C00;
+	text-decoration:none;
+	font-weight: bold;
+	padding: 2px;
+	border:1px solid #080d73;
+	border-radius: 5px;
+}
+
+a.bodylink:hover {
+	
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911) );
+	background:-moz-linear-gradient( center top, #f2ab1e 5%, #f0c911 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911');
+	background-color:#f2ab1e;
+	color:#A60C00;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 2px;
+	border-radius: 5px;
+}
+
 a.zip,
 a.zip span {
   background: transparent url(../images/zip.png) no-repeat 0 0;
@@ -480,6 +517,7 @@ footer .owner p a {
 
 .markdown-body h4 {
   font-size: 18px;
+  color:#080e73;
 }
 
 .markdown-body h5 {
