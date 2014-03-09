@@ -431,6 +431,7 @@ a.download-button span {
 }
 
 footer {
+  clear: both;
   margin-bottom: 60px;
   padding-bottom: 60px;
 }

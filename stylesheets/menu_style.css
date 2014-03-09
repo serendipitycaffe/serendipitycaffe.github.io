@@ -1,0 +1,32 @@
+#main-container {
+	
+	display: table;
+	width: 100%;
+}
+
+.main-row {
+	
+	display: table-row;
+}
+
+.left {
+	
+	display: table-cell;
+	width: 47%;
+	padding: 2px;
+	float: left;
+}
+
+.right {
+	
+	display: table-cell;
+	width: 47%;
+	padding: 2px;
+	float: right;
+}
+
+.main-text {
+	
+	vertical-align:middle;
+	margin-top: 25%;
+}
