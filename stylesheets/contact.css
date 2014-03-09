@@ -23,6 +23,11 @@ textarea {
 	border-radius: 10px;
 }
 
+.error {
+	
+	color:#A60C00;
+}
+
 table.contact, tr, td {
 	
 	width: auto;
@@ -45,5 +50,4 @@ table.contact, tr, td {
 	overflow:hidden;
 	height: 350px;
 	width:300px;
-}
 }
