@@ -23,7 +23,7 @@
 
   <div class="wrapper">
     <header id="header">
-		<img src="images/dipsunsidewhitemid.png">
+		<img src="images/dipsunsidewhitemid.png" alt="Serendipity Logo">
     </header>
     <div id="container">
     	<div id="location">
@@ -53,50 +53,38 @@
  		<table class="contact">
           <tr>
                  
-             <td><label for="firstname"><span class="strong">First Name
-             	<span class="error">*</span>
-             	</span></label></td></tr>
-             <tr><td><input type="text" name="firstname" placeholder="John" value="" size="30" /></td>
+             <td><label for="firstname"><span class="strong">First Name *</span></label></td></tr>
+             <tr><td><input type="text" name="firstname" placeholder="John" size="30" required /></td>
               </tr>
              <tr>
-           	 <td><label for="lastname"><span class="strong">Last Name
-           	 	<span class="error">*</span>
-           	 	</span></label></td></tr>
-                <tr><td><input type="text" name="lastname" placeholder="Doe" value="" size="30" /></td>
+           	 <td><label for="lastname"><span class="strong">Last Name *</span></label></td></tr>
+                <tr><td><input type="text" name="lastname" placeholder="Doe" size="30" required /></td>
               </tr>
                       
                 <tr>
-                <td><label for="phone"><span class="strong">Phone
-                	<span class="error">*</span>
-                	</span></label></td></tr>
-                <tr><td><input name="phone" type="text" placeholder="555-555-5555" value="" size="30" /></td>
+                <td><label for="phone"><span class="strong">Phone *</span></label></td></tr>
+                <tr><td><input name="phone" type="text" placeholder="555-555-5555" size="30" required /></td>
                 </tr>
                                 
                 <tr>
                 <td><label for="email"><span class="strong">E-mail</span></label></td></tr>
-               <tr><td><input name="email" type="email" placeholder="myname@example.com" value="" size="30" /></td>
+               <tr><td><input name="email" type="email" placeholder="myname@example.com" size="30" /></td>
                </tr>
                 
                                 
                 <tr>
-                 <td><label for="time"><span class="strong">Preferred Time To Contact
-                 	<span class="error">*</span>
-                 	</span></label></td></tr>
-                 <tr><td><input name="time" type="text" placeholder="Between 9am and 5pm" value="" size="30" /></td>
+                 <td><label for="time"><span class="strong">Preferred Time To Contact *</span></label></td></tr>
+                 <tr><td><input name="time" type="text" placeholder="Between 9am and 5pm" size="30" required /></td>
                  </tr>
                  
                  <tr>
-                 	<td><label for="message"><span class="strong">Message:
-                 		<span class="error">*</span>
-                 		</span></label></td></tr>
-                 	<tr><td><textarea name="message" placeholder="Enter your message here"></textarea></td>
+                 	<td><label for="message"><span class="strong">Message: *</span></label></td></tr>
+                 	<tr><td><textarea name="message" placeholder="Enter your message here" required></textarea></td>
                  </tr>
                                 
                  <tr>
-                 <td><label for="captcha"><span class="strong">Add these numbers:
-                 	<span class="error">*</span>
-                 	</span><br />5 + 2 =</label></td></tr>
-                 <tr><td><input type="text" name="captcha" /></td>
+                 <td><label for="captcha"><span class="strong">Add these numbers: *</span><br />5 + 2 =</label></td></tr>
+                 <tr><td><input type="text" name="captcha" required /></td>
                 </tr>
                   <tr>
                  <tr><td colspan="2"><input type="submit" name="button" id="button" value="Submit" />
