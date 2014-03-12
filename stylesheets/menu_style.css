@@ -2,6 +2,7 @@
 	
 	display: table;
 	width: 100%;
+	background-color: #fff;
 }
 
 .main-row {
@@ -25,8 +26,98 @@
 	float: right;
 }
 
-.main-text {
+.menuheader {
 	
-	vertical-align:middle;
-	margin-top: 25%;
+	clear: both;
+	width: 100%;
+	height: auto;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e) );
+	background:-moz-linear-gradient( center top, #f0c911 5%, #f2ab1e 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f2ab1e');
+	background-color:#f0c911;
+}
+
+.menuheader h3 {
+	
+	color:#A60C00;
+	font-weight:bold;
+	text-align: center;
+}
+
+.menuheader:hover {
+	
+	clear: both;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911) );
+	background:-moz-linear-gradient( center top, #f2ab1e 5%, #f0c911 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911');
+	background-color:#f2ab1e;
+}
+
+.dropdown {
+	
+	display: none;
+}
+
+.cell-left {
+	
+	display: inline-block;
+	width: 47%;
+	padding: 2px;
+	float: left;
+	text-align: left;
+}
+
+.cell-right {
+	
+	display: inline-block;
+	width: 47%;
+	padding: 2px;
+	float: right;
+	text-align: left;
+}
+
+.omelet-page {
+	
+	display: table;
+	width: 100%;
+}
+
+.ome-row {
+	
+	display: table-row;
+	text-align: center;
+}
+
+.ome-left {
+	
+	display: table-cell;
+	float: left;
+	width: 47%;
+	padding: 2px;
+	text-align: left;
+}
+
+.ome-right {
+	
+	display: table-cell;
+	float: right;
+	width: 47%;
+	padding: 2px;
+	text-align: left;
+}
+
+.menubody {
+	
+	width: 100%;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #080d73), color-stop(1, #393d8f) );
+	background:-moz-linear-gradient( center top, #080d73 5%, #393d8f 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#080d73', endColorstr='#393d8f');
+	background-color:#080d73;
+}
+
+.menubody h4 {
+	
+	color:#FFD373;
+	font-weight:bold;
+	text-align: center;
 }
