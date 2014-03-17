@@ -48,14 +48,52 @@
 <a name="serendipity-caffe" class="anchor" href="#serendipity-caffe"><span class="octicon octicon-link"></span></a>Serendipity Caffe: Contact Us</h2>
 
 <div id="inputs">
-	<p align="center"><span class="strong">We are still under construction, but please contact:<br/>
-	503-861-0222 <br />
-	With any questions.</span></p>
+	<form name="contact" method="post" action="contact.php">
 	
-	<table><tr><td><span class="strong">Address:</span></td><td> 160 South Main Avenue</td></tr>
-	<tr><td></td><td>Warrenton, OR, 97146</td></tr></table>
-	
-	<p><span class="strong">Hours:</span> Monday-Sunday 6:30am-3:00pm</p>
+ 		<table class="contact">
+          <tr>
+                 
+             <td><label for="firstname"><span class="strong">First Name *</span></label></td></tr>
+             <tr><td><input type="text" name="firstname" placeholder="John" size="30" required /></td>
+              </tr>
+             <tr>
+           	 <td><label for="lastname"><span class="strong">Last Name *</span></label></td></tr>
+                <tr><td><input type="text" name="lastname" placeholder="Doe" size="30" required /></td>
+              </tr>
+                      
+                <tr>
+                <td><label for="phone"><span class="strong">Phone *</span></label></td></tr>
+                <tr><td><input name="phone" type="text" placeholder="555-555-5555" size="30" required /></td>
+                </tr>
+                                
+                <tr>
+                <td><label for="email"><span class="strong">E-mail</span></label></td></tr>
+               <tr><td><input name="email" type="email" placeholder="myname@example.com" size="30" /></td>
+               </tr>
+                
+                                
+                <tr>
+                 <td><label for="time"><span class="strong">Preferred Time To Contact *</span></label></td></tr>
+                 <tr><td><input name="time" type="text" placeholder="Between 9am and 5pm" size="30" required /></td>
+                 </tr>
+                 
+                 <tr>
+                 	<td><label for="message"><span class="strong">Message: *</span></label></td></tr>
+                 	<tr><td><textarea name="message" placeholder="Enter your message here" required></textarea></td>
+                 </tr>
+                                
+                 <tr>
+                 <td><label for="captcha"><span class="strong">Add these numbers: *</span><br />5 + 2 =</label></td></tr>
+                 <tr><td><input type="text" name="captcha" required /></td>
+                </tr>
+                  <tr>
+                 <tr><td colspan="2"><input type="submit" name="button" id="button" value="Submit" />
+                  <input type="reset" name="button2" id="button2" value="Reset" />
+                   </td>
+                   </tr>
+                  </table>	
+
+                </form>
 </div>
 
 <div id="gmap_canvas"></div>
