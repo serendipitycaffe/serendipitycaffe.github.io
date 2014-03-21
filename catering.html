@@ -1,3 +1,4 @@
+
 <!doctype html>
 <!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
 <!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
@@ -6,10 +7,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
+  <link rel="stylesheet" href="stylesheets/catering.css" media="screen"/>
   <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+  <link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
+  <script type="text/javascript" src="javascripts/catering.js"></script>
 
   <title>Catering</title>
   <meta name="description" content="Where good things happen">
@@ -22,43 +26,88 @@
 
   <div class="wrapper">
     <header id="header">
-		<img src="images/dipsunsidewhitemid.png" alt="Serendipity Logo">
+		UPTOWN AND SERENDIPITY COMBINED LOGO
     </header>
-    <div id="container">
-    	<div id="location">
-      		<p class="info"><span class="strong">Address:</span> 160 South Main Avenue, Warrenton, OR 97146<br />
-      			<span class="strong">Phone:</span> (503) 861-0222</p></div>
-      	<div id="hours">
-      		<p class="info"><span class="strong">Hours:</span> Open every day<br />
-      			6:30 am - 3 pm</p></div>
-      
+   
       <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <div class="button"><a href="index.html">Home</a></div>
-          <div class="button"><a href="menu.html">Menu</a></div>
-          <div class="button"><a href="catering.html">Catering</a></div>
-          <div class="button"><a href="contact.html">Contact</a></div>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
+      
         <article class="markdown-body">
           <h2>
-<a name="serendipity-caffe" class="anchor" href="#serendipity-caffe"><span class="octicon octicon-link"></span></a>Serendipity Caffe</h2>
+<a name="serendipity-caffe" class="anchor" href="#serendipity-caffe"><span class="octicon octicon-link"></span></a>Catering</h2>
 
 	<p><span class="strong">We are still under construction, but please contact:</span></p>
 	<p><span class="strong">503-861-0222</span></p>
 	<p><span class="strong">For catering requests.</span></p>
+	
+	<div id="inputs">
+	<form name="contact" method="post" action="contact.php">
+	
+ 		<table class="contact">
+          <tr>    
+             <td><label for="firstname"><span class="strong">First Name *</span></label></td>
+             <td><label for="lastname"><span class="strong">Last Name *</span></label></td>
+             </tr>
+             
+             <tr>
+             	<td><input type="text" name="firstname" placeholder="John" size="30" required /></td>
+             	<td><input type="text" name="lastname" placeholder="Doe" size="30" required />
+             </tr>
+       
+             <tr>
+                <td><label for="phone"><span class="strong">Phone *</span></label></td>
+                <td><label for="email"><span class="strong">E-mail</span></label></td>
+                </tr>
+                
+              <tr>
+                <td><input name="phone" type="text" placeholder="555-555-5555" size="30" required /></td>
+                <td><input name="email" type="email" placeholder="myname@example.com" size="30" /></td>
+             </tr>
+                                                 
+             <tr>
+             	 <td><label for="date"><span class="strong">Catering Date *</span></label></td>
+                 <td><label for="time"><span class="strong">Preferred Time To Contact *</span></label></td>
+                 </tr>
+                 
+                 
+              <tr>
+              	<td><input name="date" id="date" type="text" placeholder="01/01/1901" size="30" required /></td>
+              	<td><input name="time" type="text" placeholder="Between 9am and 5pm" size="30" required /></td>
+             </tr>
+                 
+                 <tr>
+                 	<td><label for="message"><span class="strong">Message: *</span></label></td>
+                 	<td><label for="contact_method"><span class="strong">Preferred Method of Contact *</span></label></td>
+                 	</tr>
+                 	
+                 <tr><td><textarea name="message" placeholder="Enter your message here" required></textarea></td>
+                 	<td><input type="checkbox" name="prefer_phone">Phone
+                 	<input type="checkbox" name="prefer_email">E-mail</td>
+                 </tr>
+                        
+                 <tr align="center">
+                 <td><label for="captcha"><span class="strong">Add these numbers: *</span><br />5 + 2 =</label></td></tr>
+                 <tr align="center"><td><input type="text" name="captcha" required /></td>
+                </tr>
+                 <tr align="center">
+                 	<td colspan="2"><input type="submit" name="button" id="button" value="Submit" />
+                  <input type="reset" name="button2" id="button2" value="Reset" />
+                   </td>
+                   </tr>
+                  </table>	
+
+                </form>
+                </div>
+	
+	<div class="button"><a href="index.html">Return to Serendipity Caffe</a></div>
+	<div class="button">Return to Uptown Cafe</div>
+
 
         </article>
       </div>
-    </div>
     <footer>
-      <div class="owner">
-
-      <p><a href="https://www.facebook.com/serendipitycaffe" class="avatar"><img src="images/facebook.png" width="48" height="48"/></a>For special offers, <a href="https://www.facebook.com/serendipitycaffe">like us</a> on Facebook</p>
-
-      </div>
+    	<div class="owner">
+    			<p><a href="https://www.facebook.com/serendipitycaffe" class="avatar"><img src="images/facebook.png" width="48" height="48"/></a>For special offers, <a href="https://www.facebook.com/serendipitycaffe">like us</a> on Facebook</p>
+	</div>
       <div class="creds">
         <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
       </div>
