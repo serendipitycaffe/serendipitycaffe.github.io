@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#date").datepicker();
-  /*  $("button").click(function() {
+    $("button").click(function() {
     	//validation text
-   }); */
-});
+   });
+}); (jQuery);
