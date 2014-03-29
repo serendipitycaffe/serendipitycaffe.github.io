@@ -42,6 +42,7 @@ table.contact, tr, td {
 }
 
 #map {
+	
 	overflow:hidden;
 	height: 350px;
 	width:300px;
