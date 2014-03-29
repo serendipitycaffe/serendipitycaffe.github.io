@@ -23,14 +23,21 @@ textarea {
 	border-radius: 10px;
 }
 
-table.contact, tr, td {
+#contact-table {
 	
 	width: auto;
-	color: #A60C00;
+	color: #000;
 	vertical-align: top;
 	padding: 2px;
 	margin: 10px;
 	font-family: Arial, Helvetica, sans-serif;
+	text-size: large;
+}
+
+p.contact {
+	
+	font-family: Arial, Helvetica, sans-serif;
+	text-size: large;
 }
 
 
